@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/navigationBarColor1"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/signin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginEnd="50dp"
+        android:layout_marginBottom="50dp"
+        android:gravity="center"
+        android:text="@string/sign_in"
+        android:textColor="@color/white"
+        android:textSize="30sp" />
+    <EditText
+        style="@style/LoginField"
+        android:id="@+id/username"
+        android:layout_below="@id/signin"
+        android:hint="@string/username"/>
+    <EditText
+        style="@style/LoginField"
+        android:id="@+id/password"
+        android:layout_below="@id/username"
+        android:hint="Password"
+        android:inputType="textPassword" />
+
+    <Button
+        style="@style/WrapContent"
+        android:layout_marginTop="50dp"
+        android:id="@+id/loginbtn"
+        android:layout_width="160dp"
+        android:layout_height="70dp"
+        android:layout_below="@id/password"
+        android:background="@drawable/buttoncustom"
+        android:backgroundTint="@color/white"
+        android:text="@string/log_in"
+
+        android:onClick="onLogin"
+        />
+    <TextView
+        style="@style/WrapContent"
+        android:id="@+id/forgotpass"
+        android:layout_below="@id/loginbtn"
+        android:text="@string/forgot_password"
+        android:textColor="@color/white"
+        android:layout_margin="20dp"/>
+    <TextView
+        style="@style/WrapContent"
+        android:id="@+id/others"
+        android:layout_above="@id/socialicon"
+        android:text="@string/or_sign_in_with"
+        android:textColor="@color/white"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/socialicon"
+        android:gravity="center"
+        android:layout_alignParentBottom="true">
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_margin="20dp"
+            android:src="@drawable/google"
+            android:contentDescription="TODO"
+            tools:ignore="ContentDescription" />
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_margin="20dp"
+            android:src="@drawable/facebook"
+            android:contentDescription="@string/todo" />
+    </LinearLayout>
+</RelativeLayout>
